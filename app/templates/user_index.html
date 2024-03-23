@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!-- <link rel="stylesheet" href="{%static 'static/css/index.css'%}"> -->
+    <title>Women Safty</title>
+</head>
+<body >
+<!-- =========================================================nav starts================================================= -->
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Saftyapp</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link active">welcome {{request.user}}</a> 
+                </li>
+            </ul>  
+        </div> 
+        <!-- <div>
+            <li class="nav-link">
+                <a href=""></a>
+            </li>
+        </div> -->
+    </div>
+    
+    <div>
+            <div class="container-fluid">
+              <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                <ul class="navbar-nav">
+                  
+                  <li class="nav-item dropdown">
+                    <button class="btn btn-warm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item" href="{%url 'userprofile'  %}">Add profile</a></li>
+                      <li><a class="dropdown-item" href="{%url 'complaint' %}">Add Complaint</a></li>
+                      <li><a class="dropdown-item" href="{%url 'specifieduser' pk=request.user.id%}">view profile</a></li>
+                      <li><a class="dropdown-item" href="{%url 'checkcomplaint'%}">check complaint</a></li>
+
+                      <li><a class="dropdown-item" href="{%url 'saftytipsview' %}">saftytips</a></li>
+                      <li><a class="dropdown-item" href="{%url 'logout' %}">logout</a></li>
+
+
+
+
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+    </div>
+    <div>
+      <form action="{% url 'search' %}" method="GET">
+        <input type="text" name="query" placeholder="Search...">
+        <button type="submit">Search</button>
+    </form>
+    </div>
+
+    <div>
+<!-- Button trigger modal -->
+  
+  <!-- Modal -->
+  <div>
+          <a class=" " href="{%url 'alert_sent' %}">sos</a>
+        </div>
+        
+    </div>
+  </div>    </div>
+    <!-- ------------------------------------------------------------------ -->
+</nav>
+<div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.9531585635505!2d76.34271137327569!3d10.02072427268137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080c61ec082add%3A0xf5f56e9d266e15a8!2sThrikkakara%20Janamaithri%20Police%20Station!5e0!3m2!1sen!2sin!4v1710406961050!5m2!1sen!2sin" width="1200" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+<!-- =======================================================nav ends====================================================== -->
+
+<!-- <div>
+    <img src="/safty/static/images/womensafty.png" alt="" height="400px" width="100%">
+</div>
+
+
+      
+</body>
+</html>

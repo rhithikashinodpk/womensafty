@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Safty tips</h1>
+    <form action="" method="post" enctype="multipart/form-data">
+        {%csrf_token%}
+        {{form.as_p}}
+        <button type="submit">submit</button>
+    </form>
+
+
+
+</head>
+<style>
+  body{
+    background: linear-gradient(to bottom,#ebc9c9,#f6f4f2,#ebc9c9);
+    }
+</style>
+
+<body>
+  <a class="nav-link active" aria-current="page" href="{%url 'safty_tips'%}">
+    <button type="button" class="btn btn background-color:#faf9f8;">
+  </button>
+  </a>
+  <form action="" method="post" enctype="multipart/form-data">
+    <div class="container mt-3 d-flex justify-content-center">
+      <div class="card" style="width: 22rem;">
+      </div></div></form>
+</body>
+</html>

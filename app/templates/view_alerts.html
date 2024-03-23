@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Alerts</title>
+</head>
+<body>
+    <h2>View Alerts</h2>
+    {% if alerts %}
+        <ul>
+            {% for alert in alerts %}
+                <li>{{ alert.message }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No alerts available.</p>
+    {% endif %}
+</body>
+</html>

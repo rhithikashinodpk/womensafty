@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Complaints</title>
+</head>
+<body>
+    <h1>User Complaints</h1>
+    <ul>
+        {% for complaint in complaint_list %}
+            <li>{{ complaint.title }} - {{ complaint.description }}</li>
+        {% empty %}
+            <li>No complaints found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
